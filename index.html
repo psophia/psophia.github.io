@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+        <title> My First Website </title>
+    </head>
+    
+    <style>
+        /* This is where all of your additional CSS (or styling) will go! */
+        body {
+            width:75%;
+            margin:auto;
+            margin:auto;
+            text-align:center;
+            font-family: "Source Sans Pro";
+            color:#ff1111;
+            background-color:#ff1444;
+        }
+    </style>
+    
+    <!-- Let's Make a Website
+        All of your changes you make to the HTML file will automatically appear on the right side.
+        If there is an error on a line you may see a dotted orange line. Click the little green guy in the bottom center of your screen to see more details of the error.
+        If you get stuck try clicking on the 'Documentation' tab at the bottom of the screen for help. 
+        Have fun! Feel free to ask for help! -->
+    
+    <body>
+    
+        <!-- Task 1: Create a Heading for your website inside of the 'h1' tag called "My First Website" -->
+        
+        <h2>cat</h2>
+        
+        <!-- Task 2: Add a subtitle inside of a 'p' tag below this line called "By [Your Name]"-->
+        <p>By Sophia</p>
+        
+        <!-- Task 3: Add the image "https://www.kasandbox.org/programming-images/creatures/Hopper-Cool.png" inside the image tag below. Then add a title for the image inside of the 'alt' tag below called "Hopper-Cool". We'll be using the onclick function in the next Task. If added correctly Hopper should appear below your name. -->
+        <img src = "https://www.kasandbox.org/programming-images/creatures/Hopper-Cool.png" alt="Hopper-Cool" id="myImage" onclick="changeImage()">
+        
+        <!-- End of Task 3 --> 
+        
+        <!-- Task 4: Now let's create a function that changes the 'img src' everytime a user clicks on the image.  For this we'll be using some javascript and conditional statements. -->
+        <script>
+            function changeImage() {
+                //If this function works correctly Hopper will put on or take off his sunglasses each time he is   clicked.
+            
+                //The line below stores all the information about the "myImage" image including src and alt. Thematch() function compares two strings and returns True if there is a match.
+                var image = document.getElementById('myImage');
+                if (image.alt.match("Hopper-Cool")) {
+                    image.src = "https://www.kasandbox.org/programming-images/creatures/Hopper-Happy.png";
+                    image.alt = "Hopper-Happy";
+                } else {
+                    image.src = "https://www.kasandbox.org/programming-images/creatures/Hopper-Cool.png";
+                    image.alt = "Hopper-Cool";
+                }
+            }
+        </script>
+        
+        <!-- End of Task 4 --> 
+        
+        <!-- Task 5: Hopper now needs a greeting message! Use the alert() function to 'print' out a greeting based on the user's input in the text field provided. Make sure to fill in all the blanks! A pop-up window should appear with your text if your function works correctly. -->
+        <br>Hello!<br>
+        
+        <!-- Uncomment this section to see the form appear on your website
+        <form onsubmit="">
+            Enter a greeting! <br>
+            <input type="text" name="greeting" id = "">
+            <input type="submit" value="Submit">
+        <br>
+        </form>
+         -->
+        
+        <script>
+            function greetings() {
+                var greeting = document.getElementById('greeting').value;
+            }
+        </script>
+        <br><br> <!-- These tags just add some line breaks to your website -->
+        <!-- End of Task 5-->
+        
+        <!-- Task 6: Change the background-color of your website using the HTML form and some JavaScript-->
+        
+        
+        <form onsubmit="changecolor()">
+          Select your favorite color: <br>
+          <input type="color" name="favcolor" value="#ff9999" id = "color">
+          <input type="submit">
+        </form>
+        
+        
+        <script>
+            //Hint: Change the body of your HTML page to the color you selected and submitted
+            //Hint: document.body.style.backgroundColor may be useful
+            function changecolor() {
+                
+            }
+        </script>
+        
+        <!-- End of Task 6: --> 
+        
+        <!-- Congratulations! You made your first interactive website. If you have time, try playing with some of          the CSS styling at the top of the page to change your website even furthur. -->
+    </body>
+</html>
